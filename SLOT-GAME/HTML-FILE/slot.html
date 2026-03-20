@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky Slots Casino</title>
+    <link rel="stylesheet" href="..//CSS-FILE/slot.css">
+</head>
+<body>
+    <!-- red flash overlay-->
+    <div class="red-flash" id="redFlash"></div>
+
+    <!-- age verification -->
+    <div class="age-modal" id="ageModal">
+        <div class="age-content">
+            <div class="age-icon">🔞</div>
+            <h2 class="age-title">Age Verification</h2>
+            <p class="age-text">This game contains gambling content. You must be 18 years or older to play.</p>
+            <div class="age-buttons">
+                <button class="age-btn age-btn-yes" onclick="confirmAge(true)">Yes, I'm 18+</button>
+                <button class="age-btn age-btn-no" onclick="confirmAge(false)">No, I'm Under 18</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- jackpot overlay -->
+    <div class="jackpot-overlay" id="jackpotOverlay" onclick="closeJackpot()">
+        <div class="confetti-container" id="confettiContainer"></div>
+        <div class="jackpot-content">
+        <div class="jackpot-text">🎉 JACKPOT! 🎉</div>
+            <div class="jackpot-subtext">You Won Big!</div>
+            <button class="continue-btn" onclick="closeJackpot(); event.stopPropagation();">Continue Playing</button>
+        </div>
+    </div>
+
+    <!--lose overlay -->
+    <div class="lose-overlay" id="loseOverlay" onclick="closeLose()">
+        <div class="lose-content">
+            <div class="lose-icon">😢</div>
+            <div class="lose-text">SO CLOSE!</div>
+            <div class="lose-subtext">Try again for the big win</div>
+            <button class="continue-btn lose-btn" onclick="closeLose(); event.stopPropagation();">Try Again</button>
+        </div>
+    </div>
+
+    <div id="homePage">
+        <div class="floating-icons">
+            <span class="icon" style="top: 10%; left: 10%; animation-delay: 0s;">🎰</span>
+            <span class="icon" style="top: 20%; right: 15%; animation-delay: 2s;">🍎</span>
+            <span class="icon" style="bottom: 30%; left: 20%; animation-delay: 4s;">🍇</span>
+            <span class="icon" style="bottom: 20%; right: 10%; animation-delay: 6s;">🍊</span>
+            <span class="icon" style="top: 50%; left: 5%; animation-delay: 8s;">💎</span>
+            <span class="icon" style="top: 60%; right: 5%; animation-delay: 10s;">7️⃣</span>
+        </div>
+
+        <div class="logo-container">
+            <h1 class="logo">LUCKY SLOTS</h1>                                   
+            <p class="subtitle">Premium Casino Experience</p>
+        </div>
+
+        <button class="play-button" onclick="showGame()">Play Now</button>
+    </div>
+
+    <div id="gamePage">
+        <button class="back-button" onclick="showHome()">← Back</button>
+
+        <div class="game-header">
+            <h2 class="game-title">🎰 Spin to Win The Jockpot</h2>
+        </div>
+
+        <div class="slot-machine" id="slotMachine">
+            <div class="reels-container">
+                <div class="reel" id="reel1">
+                    <input type="text" id="item1" readonly>
+                </div>
+                <div class="reel" id="reel2">
+                    <input type="text" id="item2" readonly>
+                </div>
+                <div class="reel" id="reel3">
+                    <input type="text" id="item3" readonly>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button class="strike-btn" onclick="strikeWithAnim('item1', 'reel1')">Spin 1</button>
+                <button class="strike-btn" onclick="strikeWithAnim('item2', 'reel2')">Spin 2</button>
+                <button class="strike-btn" onclick="strikeWithAnim('item3', 'reel3')">Spin 3</button>
+                <button class="reset-btn" onclick="resetWithAnim()">Reset Machine</button>
+            </div>
+
+            <div class="fruit-icons">
+                <span class="fruit-icon">🍎</span>
+                <span class="fruit-icon">🍇</span>
+                <span class="fruit-icon">🍊</span>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../SCRIPT-FILE/slot.js">
+</script>
+</html>
