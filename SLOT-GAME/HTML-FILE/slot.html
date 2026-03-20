@@ -10,19 +10,6 @@
     <!-- red flash overlay-->
     <div class="red-flash" id="redFlash"></div>
 
-    <!-- age verification -->
-    <div class="age-modal" id="ageModal">
-        <div class="age-content">
-            <div class="age-icon">🔞</div>
-            <h2 class="age-title">Age Verification</h2>
-            <p class="age-text">This game contains gambling content. You must be 18 years or older to play.</p>
-            <div class="age-buttons">
-                <button class="age-btn age-btn-yes" onclick="confirmAge(true)">Yes, I'm 18+</button>
-                <button class="age-btn age-btn-no" onclick="confirmAge(false)">No, I'm Under 18</button>
-            </div>
-        </div>
-    </div>
-
     <!-- jackpot overlay -->
     <div class="jackpot-overlay" id="jackpotOverlay" onclick="closeJackpot()">
         <div class="confetti-container" id="confettiContainer"></div>
@@ -58,7 +45,20 @@
             <p class="subtitle">Premium Casino Experience</p>
         </div>
 
-         <button class="play-button" onclick="showAgeVerification()">Play Now</button>
+        <button class="play-button" onclick="showAgeVerification()">Play Now</button>
+    </div>
+
+    <!-- age verification -->
+    <div class="age-modal" id="ageModal">
+        <div class="age-content">
+            <div class="age-icon">🔞</div>
+            <h2 class="age-title">Age Verification</h2>
+            <p class="age-text">This game contains gambling content. You must be 18 years or older to play.</p>
+            <div class="age-buttons">
+                <button class="age-btn age-btn-yes" onclick="confirmAge(true)">Yes, I'm 18+</button>
+                <button class="age-btn age-btn-no" onclick="confirmAge(false)">No, I'm Under 18</button>
+            </div>
+        </div>
     </div>
 
     <div id="gamePage">
