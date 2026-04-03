@@ -1,7 +1,7 @@
 # Simple_Slot_Game
 - A feature-rich slot machine game with realistic animations, age verification, and immersive win/lose effects.
 **Live Demo:** [https://redluzon.github.io/Simple_Slot_Game/SLOT-GAME/HTML-FILE/slot.html]
-]
+
 
 ### Features
 - Age verification modal (18+ gambling content warning)
